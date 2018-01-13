@@ -16,9 +16,11 @@ A MQTT development environment based on below components:-
 To run the Qt Creator in the container execute below commands
 
 #Important to run GUI apps from the container
+
 xhost local:root
 
 #Build the docker image.
+
 docker build --no-cache -t  qt_5.10_mqtt_install .
 
 #Run the through the installation wizard for installation. 
@@ -28,9 +30,11 @@ docker build --no-cache -t  qt_5.10_mqtt_install .
 docker run -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY -v /dev/shm:/dev/shm --name qt_dev_5_10_install_con --entrypoint /home/qt-unified-linux-x64-online.run qt_5.10_mqtt_install
 
 #Execute below commad in different termianl to access the terminal of our container
-docker exec -it qt_dev_5_10_install_con /bin/bash
+d
+ocker exec -it qt_dev_5_10_install_con /bin/bash
 
 #In our Docker container execute below commands
+
 git clone https://github.com/qt/qtmqtt.git
 
 cd qtmqtt
@@ -38,9 +42,15 @@ cd qtmqtt
 #Below steps will build and install QtMqtt components for Qt 5.10.0  
 
 <PathToQmake> i.e. if you don't change my default it will be /opt/Qt/5.10.0/gcc_64/bin/qmake
+
 For example
+
 /opt/Qt/5.10.0/gcc_64/bin/qmake qtmqtt.pro -spec linux-g++
+
 make 
+
+
+
 make install
 
 #Save the image with Qt instllation in it from some other terminal. After this you can remove the old image and container
