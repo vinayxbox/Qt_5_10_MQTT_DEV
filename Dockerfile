@@ -17,7 +17,7 @@ RUN yum -y --enablerepo=centos-sclo-rh-testing install devtoolset-7-gcc devtools
 RUN yum -y update && yum -y install botan wget clucene09-core glx-utils mesa-libGLES \
 gstreamer-plugins-base libX11 libXrender libXi libXfixes libXext libxslt qt-x11 \
 libxkbcommon libxcb xcb-util-image xcb-util-keysyms xcb-util-renderutil \
-xcb-util-wm freetype fontconfig git
+xcb-util-wm freetype fontconfig git epel-release mosquitto
 
 #Beginning Qt instllation
 RUN wget http://download.qt.io/official_releases/online_installers/qt-unified-linux-x64-online.run -P /home/
