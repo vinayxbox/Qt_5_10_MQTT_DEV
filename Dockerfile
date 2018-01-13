@@ -12,6 +12,7 @@ RUN gcc --version
 #Updating the tool chain to version 7
 RUN yum -y install centos-release-scl-rh
 RUN yum -y --enablerepo=centos-sclo-rh-testing install devtoolset-7-gcc devtoolset-7-gcc-c++
+RUN scl enable devtoolset-7 bash
 
 #Installing required packages for Qt Creator to run
 RUN yum -y update && yum -y install botan wget clucene09-core glx-utils mesa-libGLES \
