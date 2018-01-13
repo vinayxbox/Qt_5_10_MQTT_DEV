@@ -1,7 +1,7 @@
 # Qt_5_10_MQTT_DEV
 Development environment for MQTT based on Qt 5.10.0 (Qt Creator IDE), QtMqtt and Mosquitto Broker. CentOS 7.4.1708 is used as based image.
 
-A MQTT development environment based on
+A MQTT development environment based on below components:-
 1.) Qt 5.10.0 (Development framework). http://download.qt.io/official_releases/online_installers/qt-unified-linux-x64-online.run (Community Edition)
 2.) QtMqtt(MQTT client library.) https://github.com/qt/qtmqtt.git
 3.) Mosquitto Broker (MQTT broker). https://mosquitto.org/download/
